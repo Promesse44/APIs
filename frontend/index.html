@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Search & Booking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1><i class="fas fa-hotel"></i> HotelFinder</h1>
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Enter city or destination">
+            <!-- Search suggestions will be added here dynamically -->
+          </div>
+          <div class="date-inputs">
+            <div class="date-field">
+              <i class="far fa-calendar-alt"></i>
+              <label for="checkInDate">Check-in</label>
+              <input type="date" id="checkInDate">
+            </div>
+            <div class="date-field">
+              <i class="far fa-calendar-alt"></i>
+              <label for="checkOutDate">Check-out</label>
+              <input type="date" id="checkOutDate">
+            </div>
+          </div>
+          <button id="searchBtn" class="btn primary-btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+          <button id="locationBtn" class="btn secondary-btn">
+            <i class="fas fa-map-marker-alt"></i> Near Me
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="filters">
+        <div class="filter-group">
+          <label for="sortBy"><i class="fas fa-sort"></i> Sort by:</label>
+          <select id="sortBy">
+            <option value="price">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+            <option value="rating">Rating</option>
+            <option value="distance">Distance</option>
+          </select>
+        </div>
+        <div class="price-range">
+          <label for="priceRange"><i class="fas fa-dollar-sign"></i> Price Range:</label>
+          <input type="range" id="priceRange" min="50" max="500" step="50" value="500">
+          <span id="priceValue">$500+</span>
+        </div>
+      </div>
+
+      <div id="hotelsList" class="hotels-list"></div>
+
+      <div id="hotelDetails" class="hotel-details" style="display: none;">
+        <button id="backBtn" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Results
+        </button>
+        <div class="hotel-main">
+          <h2 id="hotelName"></h2>
+          <div class="hotel-images"></div>
+          <div class="hotel-info">
+            <p id="hotelAddress"><i class="fas fa-map-marker-alt"></i> <span class="address-text"></span></p>
+            <p id="hotelRating"><i class="fas fa-star"></i> <span class="rating-value"></span></p>
+            <p id="hotelContact"><i class="fas fa-phone"></i> <span class="contact-value"></span></p>
+          </div>
+        </div>
+        <div class="hotel-rooms">
+          <h3><i class="fas fa-bed"></i> Available Rooms</h3>
+          <div id="roomsList"></div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 HotelFinder. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
