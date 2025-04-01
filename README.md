@@ -3,10 +3,9 @@
 ## Project Overview
 This application provides a user-friendly interface to search for hotels worldwide, view detailed information about specific hotels, and explore available room options. It leverages the Booking.com API through RapidAPI to deliver real, up-to-date information about hotel availability, pricing, and features.
 
-![Application Screenshot](screenshots/app-screenshot.png)
 
 ## Demo Video
-[Watch the demo video here](https://youtu.be/your-demo-link)
+[Watch the demo video here](https://drive.google.com/file/d/1_Cqe3k6oWq-z2ksYmVkpCYEg_p5_rRZW/view?usp=sharing)
 
 ## Features
 - **Hotel Search**: Search hotels by city name or destination code
