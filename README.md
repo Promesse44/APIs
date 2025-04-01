@@ -222,7 +222,7 @@ After setting up both web servers and the load balancer, you can test the deploy
 - Payment integration for direct booking
 
 ## Contributors
-- [Promesse Irakoze](https://github.com/Prromesse44)
+- [Promesse Irakoze](https://github.com/Promesse44)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
